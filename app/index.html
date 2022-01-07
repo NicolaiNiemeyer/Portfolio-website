@@ -1,35 +1,38 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Portfolio website</title>
+  <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+
   <style>
     section{
       padding: 60px 0;
     }
   </style>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  
 </head>
+
 <body>
   
-  <!--navbar-->
-  <nav class="navbar navbar-expand-md navbar-light">
+  <!-- navbar -->
+  <nav class="navbar navbar-expand-sm navbar-dark bg-dark">    <!--laver en drop-down menu med farven dark i navbar-->
     <div class="container-xxl">
-      <a href="#intro" class="navbar-brand">
-        <span class="fw-bold text-secondary">
+
+      <!-- navbar title / brand -->
+      <a class="navbar-brand" href="#intro">
+        <span class="text-secondary">
           Nicolai Niemeyer Portfolio
         </span>
       </a>
-      <!--toggle button for mobile nav. aira helps the screen reader-->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
-      data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false"
-      aria-label="Toggle navigation">
+
+      <!-- toggle button for mobile nav. aira helps the screen reader -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <!-- navbar links-->
+      <!-- navbar links -->
       <div class="collapse navbar-collapse justify-content-end align-center" id="main-nav">
         <ul class="navbar-nav">
           <li class="nav-item">
@@ -44,25 +47,25 @@
           <li class="nav-item">
             <a class="nav-link" href="#cv">CV</a>
           </li>
-          <!-- <li class="nav-item ms-2 d-none d-md-inline">
-            <a class="btn btn-secondary" href="cv">knap tekst</a>
-          </li> -->
+          <!--<li class="nav-item ms-2 d-none d-md-inline">
+            <a class="btn btn-secondary" href="#cv">knap tekst</a>
+          </li>-->
         </ul>
       </div>
     </div>
   </nav>
 
-  <!--main cover page-->
+  <!-- main cover page -->
   <section id="intro">
-    <div class="container-lg">
-      <div class="row justify-content-center align-items-center">    <!--flytter alle rækker til midten af skærmen-->
+    <div class="container px-4">    <!-- px-4 giver rækkerne en margen på 4-->
+      <div class="row g-4 justify-content-center align-items-center">    <!--flytter alle rækker til midten af skærmen-->
         <div class="col-md-5 text-center text-md-start">   <!--på små skærme er teksten i midten, når skærmen bliver større flytter teksten sig til venstre-->
           <h1>
             <div class="display-2">Hvem er jeg?</div>
             <div class="display-5 text-muted">Jeg er mig</div>
           </h1>
           <p class="lead my-4 text-muted">Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-          <a href="#CV" class="btn btn-secondary btn-lg rounded-pill shadow-lg">CV</a>
+          <a href="#portfolio" class="btn btn-secondary btn-lg rounded-pill shadow-lg">Portfolio</a>
         </div>
         <div class="col md-5 text-center d-none d-md-block">    <!--fjerner billedet ved små skærme-->
           <img class="img-fluid" src="assets/puppy.png" alt="puppy portrait">
@@ -70,15 +73,95 @@
       </div>
     </div>
   </section>
-  <div class="container my-5">
   
+  
+  <!-- Portfolio -->
+  <section id="portfolio" class="bg-light mt-5">
+    <div class="container-lg">
+      <div class="text-center">
+        <h2>Portfolio</h2>
+        <p class="lead text-muted">Vælg et emne for at se hvilke projekter jeg har arbejdet på</p>
+      </div>
+    </div>
 
-  <!--display-1 giver en pænere overskrift-->
-  <!--h1 class="display-1 text-light text-center bg-secondary m-5 p-5 rounded-pill shadow-lg">Nicolai Niemeyer</h1>-->       <!--textfarve, baggrundsfarve, margin, padding-->
+      <!-- tilføj cards i et grid-->
+      <div class="row my-5 align-items-center justify-content-center">
+        <div class="col-8 col-lg-4 col-xl-3 py-2">     
+          <div class="card border-0">
+            <div class="card-body text-center py-4">               
+              <h4 class="card-title display-5 my-3 text-primary fw-bold">SQL</h4>
+              <p class="lead card-subtitle my-2">Database-programmering</p>
+              <!--<p class="card-text mx-5 text-muted d-none d-lg-block">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>-->
+            </div>
+          </div>
+        </div>
+
+        <div class="col-8 col-lg-4 col-xl-3 py-2">     
+          <div class="card border-0">
+            <div class="card-body text-center py-4">               
+              <h4 class="card-title display-5 my-3 text-primary fw-bold">C#</h4>
+              <p class="lead card-subtitle my-2">Objekt-orienteret programmering</p>
+              <!--<p class="card-text mx-5 text-muted d-none d-lg-block">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>-->
+            </div>
+          </div>
+        </div>
+
+        <div class="col-8 col-lg-4 col-xl-3 py-2">     
+          <div class="card border-0">
+            <div class="card-body text-center py-4">               
+              <h4 class="card-title display-5 my-3 text-primary fw-bold">Python</h4>
+              <p class="lead card-subtitle my-2">Robotter</p>
+              <!--<p class="card-text mx-5 text-muted d-none d-lg-block">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>-->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row my-1 align-items-center justify-content-center">
+        <div class="col-8 col-lg-4 col-xl-3 py-2">     
+          <div class="card border-0">
+            <div class="card-body text-center py-4">               
+              <h4 class="card-title display-5 my-3 text-primary fw-bold">HTML/CSS</h4>
+              <p class="lead card-subtitle my-2">Clientside-programmering</p>
+              <!--<p class="card-text mx-5 text-muted d-none d-lg-block">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>-->
+            </div>
+          </div>
+        </div>
+
+        <div class="col-8 col-lg-4 col-xl-3 py-2">     
+          <div class="card border-0">
+            <div class="card-body text-center py-4">               
+              <h4 class="card-title display-5 my-3 text-primary fw-bold">ML</h4>
+              <p class="lead card-subtitle my-2">Machine Learning til C# og Python</p>
+              <!--<p class="card-text mx-5 text-muted d-none d-lg-block">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>-->
+            </div>
+          </div>
+        </div>
+
+        <div class="col-8 col-lg-4 col-xl-3 py-2">     
+          <div class="card border-0">
+            <div class="card-body text-center py-4">               
+              <h4 class="card-title display-5 my-3 text-primary fw-bold">Java</h4>
+              <p class="lead card-subtitle my-2">Java ting</p>
+              <!--<p class="card-text mx-5 text-muted d-none d-lg-block">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>-->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+    </div>
+  </section>
+
+  <!-- display-1 giver en pænere overskrift -->
+  <!-- h1 class="display-1 text-light text-center bg-secondary m-5 p-5 rounded-pill shadow-lg">Nicolai Niemeyer</h1> -->       <!--textfarve, baggrundsfarve, margin, padding-->
 
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/booststrap.bundle.min.js"></script>
+  
 </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/booststrap.bundle.min.js"></script>
+<!-- JavaScript Bundle med Popper. Brug dette script hvis der skal være en dropdown menu i navbaren -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
 </body>
 </html>
